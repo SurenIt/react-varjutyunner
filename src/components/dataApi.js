@@ -4,7 +4,7 @@ import { setImages } from "../store/dataSlice";
 import { useState } from "react";
 export const DataApi = () => {
   const dispatch = useDispatch();
-  const [activeCategoriyId,setActiveCategoriyId] = useState();
+  const [activeCategoriyId, setActiveCategoriyId] = useState();
   const handleImg = async (id) => {
     setActiveCategoriyId(id);
     console.log(id);
@@ -23,15 +23,22 @@ export const DataApi = () => {
   const images = store.images;
 
   return (
-    <div>
-      {categories.map((el) => (
-        <button key={el.id} onClick={() => handleImg(el.id) } className={activeCategoriyId === el.id ? "active": ""}>
-          {el.name}
-        </button>
-      ))}
-      <div>
+    <div className="flexDiv">
+      <div className="child1">
+        <h1>Categories</h1>
+        {categories.map((el) => (
+          <button
+            key={el.id}
+            onClick={() => handleImg(el.id)}
+            className={activeCategoriyId === el.id ? "active" : ""}
+          >
+            {el.name}
+          </button>
+        ))}
+      </div>
+      <div className="child2">
         {images.map((img) => (
-          <img key={img.id} src={img.url} width={300} height={300} />
+          <img key={img.id} src={img.url} width={300} height={200} />
         ))}
       </div>
     </div>

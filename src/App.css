@@ -1,4 +1,34 @@
+.flexDiv{
+    display: flex;
+    gap: 100px;
+}
+.child1{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: rgb(212, 241, 254);
+    padding-top: 30px;
+
+}
+h1{
+    font-size: 30px;
+    text-align: center;
+}
+.child1 button{
+    font-size: 20px;
+    padding: 15px 50px;
+    border-color:transparent ;
+    /* background-color: rgb(212, 241, 254); */
+}
 .active{
     background-color: blue;
     color: white;
 }
+.child2{
+    padding: 50px;
+}
+img{
+    padding: 10px;
+}
+
+
